@@ -1,0 +1,25 @@
+<mat-card>
+  <mat-form-field>
+    <input matInput placeholder="product search" value="">
+  </mat-form-field>
+</mat-card>
+
+<mat-tab-group>
+  <mat-tab label="Commande">
+    <mat-tab-group>
+      <mat-tab label="Produit">
+        <p> outlet below named "produitOutlet"</p>>
+      </mat-tab>
+      <mat-tab label="Generiques">
+        <p> outlet below named "generiqueOutlet"</p>
+      </mat-tab>
+      <mat-tab label="History">
+        <p>outlet below named "historyOutlet" </p>
+      </mat-tab>
+    </mat-tab-group>
+  </mat-tab>
+  <mat-tab label="Panier">
+    <p> panier outlet down here named "panierOutlet" </p>
+    <router-outlet></router-outlet>>
+  </mat-tab>
+</mat-tab-group>
