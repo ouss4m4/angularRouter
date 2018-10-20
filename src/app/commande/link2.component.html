@@ -4,22 +4,22 @@
   </mat-form-field>
 </mat-card>
 
-<mat-tab-group>
+<mat-tab-group (selectedTabChange)="tabSelected($event)">
   <mat-tab label="Commande">
     <mat-tab-group>
       <mat-tab label="Produit">
-        <p> outlet below named "produitOutlet"</p>>
+        <p> "produitOutlet"</p>>
       </mat-tab>
       <mat-tab label="Generiques">
-        <p> outlet below named "generiqueOutlet"</p>
+        <p> "generiqueOutlet"</p>
       </mat-tab>
       <mat-tab label="History">
-        <p>outlet below named "historyOutlet" </p>
+        <p>"historyOutlet" </p>
       </mat-tab>
     </mat-tab-group>
   </mat-tab>
   <mat-tab label="Panier">
     <p> panier outlet down here named "panierOutlet" </p>
-    <router-outlet></router-outlet>>
+    <router-outlet name="panierOutlet"></router-outlet>>
   </mat-tab>
 </mat-tab-group>

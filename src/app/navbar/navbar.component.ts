@@ -26,6 +26,15 @@ export class NavbarComponent {
     this._router.navigate(["/login"]);
   }
   public routeTo(str) {
-    this._router.navigate([str]);
+    if (str === "commande") {
+      this._router.navigateByUrl("/commande/(panierOutlet:panier)");
+    }/*  else if (str === "documents") {
+      this._router.navigate([
+        "documents",
+        { outlets: { facturesOutlet: ["factures"] } }
+      ]);
+    } */ else {
+      this._router.navigate([str]);
+    }
   }
 }

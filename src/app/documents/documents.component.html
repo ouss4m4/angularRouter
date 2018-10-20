@@ -1,0 +1,14 @@
+<mat-tab-group (selectedTabChange)="tabSelected($event)">
+  <mat-tab label="Factures">
+    <router-outlet name="facturesOutlet"></router-outlet>
+  </mat-tab>
+  <mat-tab label="Avoirs">
+    <router-outlet name="avoirsOutlet"></router-outlet>
+  </mat-tab>
+  <mat-tab label="Reclamation">
+    <router-outlet name="reclamationsOutlet"></router-outlet>
+  </mat-tab>
+  <mat-tab label="Paiments">
+    <router-outlet name="paimentsOutlet"></router-outlet>
+  </mat-tab>
+</mat-tab-group>
