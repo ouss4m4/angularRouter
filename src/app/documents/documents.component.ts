@@ -1,5 +1,5 @@
 import { Component, OnInit } from "@angular/core";
-import { Router } from "@angular/router";
+import { Router, ActivatedRoute } from "@angular/router";
 
 @Component({
   selector: "app-documents",
@@ -7,15 +7,13 @@ import { Router } from "@angular/router";
   styleUrls: ["./documents.component.css"]
 })
 export class DocumentsComponent implements OnInit {
-  constructor(private _router: Router) {}
+  constructor(
+    private _router: Router,
+    private activatedRoute: ActivatedRoute
+  ) {}
 
-  ngOnInit() {
-    console.log('documents on init')
+  ngOnInit() {}
 
-    this._router.navigateByUrl(
-      "/documents/(facturesOutlet:factures//avoirsOutlet:avoirs//reclamationsOutlet:reclamations//paimentsOutlet:paiments)"
-    , { skipLocationChange: true });
-  }
   public tabSelected(event) {
     /*switch (event.index) {
       case 0:
