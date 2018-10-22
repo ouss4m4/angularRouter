@@ -3,15 +3,17 @@ import { Routes, RouterModule } from "@angular/router";
 import { NavbarComponent } from "./navbar.component";
 import { AuthguardService } from "../services/authguard.service";
 import { Link1Component } from "../home/link1.component";
-import { Link2Component } from "../commande/link2.component";
+import { CommandeComponent } from "../commande/commande.component";
 import { Link3Component } from "../suivi/link3.component";
-import { PanierComponent } from "../panier/panier.component";
+
 import { DocumentsComponent } from "../documents/documents.component";
 import { FacturesComponent } from "../factures/factures.component";
 import { FactureDetailComponent } from "../factures/facture-detail/facture-detail.component";
 import { AvoirsComponent } from "../avoirs/avoirs.component";
 import { ReclamationComponent } from "../reclamation/reclamation.component";
 import { PaimentComponent } from "../paiment/paiment.component";
+import { PanierComponent } from "../commande/panier/panier.component";
+import { ItemComponent } from "../commande/item/item.component";
 
 const routes: Routes = [
   {
@@ -26,9 +28,14 @@ const routes: Routes = [
       },
       {
         path: "commande",
-        component: Link2Component,
-        canActivate: [AuthguardService],
+        component: CommandeComponent,
         children: [
+          {
+            path: "",
+            redirectTo: "/commande/(panierOutlet:panier)",
+            pathMatch: "full"
+          },
+          { path: ":id", component: ItemComponent },
           {
             path: "panier",
             component: PanierComponent,

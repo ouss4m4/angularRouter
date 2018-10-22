@@ -1,0 +1,20 @@
+<mat-card>
+  <form>
+    <mat-form-field>
+      <input type="text" matInput [formControl]="search" [matAutocomplete]="auto" placeholder="search product">
+      <mat-icon matSuffix>search</mat-icon>
+    </mat-form-field>
+
+    <mat-autocomplete #auto="matAutocomplete" (optionSelected)="selected($event)">
+      <mat-option *ngFor="let option of options" [value]="option.Code">{{option.Produit}}</mat-option>
+    </mat-autocomplete>
+  </form>
+</mat-card>
+<mat-tab-group [selectedIndex]="panierOrCommande.value" (selectedIndexChange)="panierOrCommande.setValue($event)">
+  <mat-tab label="commande">
+    <router-outlet></router-outlet> <!-- router for command, generique, history  -->
+  </mat-tab>
+  <mat-tab label="panier">
+    <router-outlet name="panierOutlet"></router-outlet> <!-- named router for panier,  -->
+  </mat-tab>
+</mat-tab-group>

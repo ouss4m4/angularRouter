@@ -1,0 +1,12 @@
+.genItem {
+  cursor: pointer;
+}
+.listSpinner {
+  position: absolute;
+  size: 2em;
+  top: 15%;
+}
+.submitInput {
+  padding: 10;
+  margin: 15;
+}

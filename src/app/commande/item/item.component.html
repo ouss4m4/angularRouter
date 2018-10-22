@@ -1,0 +1,31 @@
+<mat-tab-group [selectedIndex]="selected.value" (selectedIndexChange)="selected.setValue($event)">
+
+    <mat-tab label=" Produit">
+        <mat-spinner *ngIf="productLoading"></mat-spinner>
+        <mat-list role="list" *ngIf="!productLoading">
+            <mat-list-item role="listitem"> Produit : {{item.Produit}}</mat-list-item>
+            <mat-list-item role="listitem"> Colisage : {{item.Colisage}}</mat-list-item>
+            <mat-list-item role="listitem"> DCI : {{item.DCI}}</mat-list-item>
+            <mat-list-item role="listitem"> Labo : {{item.Labo}}</mat-list-item>
+            <mat-list-item role="listitem"> Taux_UG : {{item.Taux_UG}}</mat-list-item>
+            <mat-list-item role="listitem" class="submitInput">
+                <mat-form-field>
+                    <input type="number" matInput label="Quantité" [formControl]="Qts">
+                    <mat-error *ngIf="Qts.invalid"> {{getErrorMessage()}} </mat-error>
+                </mat-form-field>
+                <button mat-raised-button color="primary" (click)="addToPanier()" [disabled]="Qts.invalid">Ajouter
+                    au
+                    panier</button>
+            </mat-list-item>
+        </mat-list>
+    </mat-tab>
+    <mat-tab label="Generique ( {{generiques.length }} )">
+        <mat-list role="list" *ngFor="let gen of generiques">
+            <mat-list-item role="listitem" (click)="onGeneriqueClick(gen.Code)" class="genItem"> {{gen.Produit}} :
+                {{gen.Taux_UG}} UG
+            </mat-list-item>
+        </mat-list>
+    </mat-tab>
+
+    <mat-tab label="Historique"> Historique </mat-tab>
+</mat-tab-group>

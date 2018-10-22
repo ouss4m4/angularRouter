@@ -5,25 +5,33 @@ import {
   MatSidenavModule,
   MatIconModule,
   MatListModule,
+  MatGridListModule,
   MatCardModule,
+  MatMenuModule,
   MatFormFieldModule,
   MatInputModule,
-  MatTabsModule
+  MatAutocompleteModule,
+  MatProgressSpinnerModule,
+  MatTabsModule,
+  MatTableModule
 } from "@angular/material";
-import { AuthService } from "./services/auth.service";
 
 @NgModule({
-  declarations: [],
   imports: [
     MatToolbarModule,
     MatButtonModule,
     MatSidenavModule,
     MatIconModule,
     MatListModule,
+    MatGridListModule,
     MatCardModule,
+    MatMenuModule,
     MatFormFieldModule,
     MatInputModule,
-    MatTabsModule
+    MatAutocompleteModule,
+    MatProgressSpinnerModule,
+    MatTabsModule,
+    MatTableModule
   ],
   exports: [
     MatToolbarModule,
@@ -31,11 +39,16 @@ import { AuthService } from "./services/auth.service";
     MatSidenavModule,
     MatIconModule,
     MatListModule,
+    MatGridListModule,
     MatCardModule,
+    MatMenuModule,
     MatFormFieldModule,
     MatInputModule,
-    MatTabsModule
+    MatAutocompleteModule,
+    MatProgressSpinnerModule,
+    MatTabsModule,
+    MatTableModule
   ],
-  providers: [AuthService]
+  providers: []
 })
 export class MaterialModule {}
