@@ -21,7 +21,6 @@ export class NavbarComponent {
     private _router: Router
   ) {}
   public logMeOut() {
-    console.log("log out yo");
     this._auth.logOut();
     this._router.navigate(["/login"]);
   }

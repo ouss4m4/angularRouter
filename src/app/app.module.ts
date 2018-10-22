@@ -7,9 +7,10 @@ import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { LayoutModule } from "@angular/cdk/layout";
 import { LoginComponent } from "./login/login.component";
 import { MaterialModule } from "./material.module";
+import { Error404Component } from "./error404/error404.component";
 
 @NgModule({
-  declarations: [AppComponent, LoginComponent],
+  declarations: [AppComponent, LoginComponent, Error404Component],
   imports: [
     BrowserModule,
     AppRoutingModule,

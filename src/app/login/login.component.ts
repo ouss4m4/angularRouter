@@ -12,7 +12,6 @@ export class LoginComponent implements OnInit {
 
   ngOnInit() {}
   public logMeIn() {
-    console.log("login fired");
     this._auth.logIn();
     this._router.navigate(["/"]);
   }

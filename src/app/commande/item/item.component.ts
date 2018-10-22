@@ -26,11 +26,7 @@ export class ItemComponent implements OnInit {
     private _serviceLayer: ServiceLayer,
     private _panierService: PanierService,
     public snackBar: MatSnackBar
-  ) {
-    setInterval(() => {
-      console.log(this.Qts.valid);
-    }, 1000);
-  }
+  ) {}
   //------
   //subscribe to params change,
   //------
@@ -55,7 +51,6 @@ export class ItemComponent implements OnInit {
         //call for generiques only after main product
         //don't recall if user clicked on a generique product
         if (this.generiques.length === 0) {
-          console.log("generique fired");
           this.loadGenerique(item.DCI);
         }
       })
@@ -68,7 +63,6 @@ export class ItemComponent implements OnInit {
       .produitGenerique(DCI)
       .then(items => {
         this.generiques = items;
-        console.log(this.generiques);
       })
       .catch(err => console.log(err));
   }
@@ -88,7 +82,6 @@ export class ItemComponent implements OnInit {
   //assign the Qts to object
   //show a 1.5s notification
   public addToPanier() {
-    console.log(this.item);
     let itemToAdd = Object.assign(this.item, { Qts: this.Qts.value });
     this._panierService.addItem(itemToAdd);
     this.openSnackBar("Ajoutér Au panier", "ok");

@@ -1,5 +1,5 @@
-import { Injectable } from '@angular/core';
-import { BehaviorSubject } from 'rxjs';
+import { Injectable } from "@angular/core";
+import { BehaviorSubject } from "rxjs";
 
 @Injectable()
 export class PanierService {
@@ -7,7 +7,7 @@ export class PanierService {
     items: Array<any>;
   };
 
-  public _items: BehaviorSubject<any[]>;
+  private _items: BehaviorSubject<any[]>;
 
   constructor() {
     this.dataStore = { items: [] };
@@ -30,7 +30,9 @@ export class PanierService {
   }
 
   public removeItem(id) {
-    this.dataStore.items = this.dataStore.items.filter(item => item.Code !== id);
+    this.dataStore.items = this.dataStore.items.filter(
+      item => item.Code !== id
+    );
     this.publish();
   }
 

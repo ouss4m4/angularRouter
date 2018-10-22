@@ -2,7 +2,7 @@ import { NgModule } from "@angular/core";
 import { Routes, RouterModule } from "@angular/router";
 import { NavbarComponent } from "./navbar.component";
 import { AuthguardService } from "../services/authguard.service";
-import { Link1Component } from "../home/link1.component";
+import { HomeComponent } from "../home/home.component";
 import { CommandeComponent } from "../commande/commande.component";
 import { Link3Component } from "../suivi/link3.component";
 
@@ -23,7 +23,7 @@ const routes: Routes = [
     children: [
       {
         path: "",
-        component: Link1Component,
+        component: HomeComponent,
         canActivate: [AuthguardService]
       },
       {

@@ -31,11 +31,9 @@ export class CommandeComponent implements OnInit {
         this.options.push(items[i]);
       }
     });
-    console.log(value);
   }
   //item selected from options
   public selected(event) {
-    console.log("option selected");
     let code = event.option.value;
     this.search.setValue("");
     this.router.navigate(["commande", code]);
@@ -43,6 +41,5 @@ export class CommandeComponent implements OnInit {
   }
   public navTab(event) {
     event = event === 0 ? "commande" : "panier";
-    console.log(event);
   }
 }
