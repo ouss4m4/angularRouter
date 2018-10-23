@@ -5,7 +5,6 @@ import { NavbarRoutingModule } from "./navbar-routing.module";
 import { CommonModule } from "@angular/common";
 import { MaterialModule } from "../material.module";
 
-import { Link3Component } from "../suivi/link3.component";
 import { DocumentsModule } from "../documents/documents.module";
 import { CommandeModule } from "../commande/commande.module";
 import { ServiceLayer } from "../services/backend.service";
@@ -21,7 +20,7 @@ import { HomeComponent } from "../home/home.component";
     CommandeModule
   ],
   exports: [],
-  declarations: [NavbarComponent, HomeComponent, Link3Component],
+  declarations: [NavbarComponent, HomeComponent],
   providers: [ServiceLayer, PanierService]
 })
 export class NavbarModule {}

@@ -4,7 +4,6 @@ import { NavbarComponent } from "./navbar.component";
 import { AuthguardService } from "../services/authguard.service";
 import { HomeComponent } from "../home/home.component";
 import { CommandeComponent } from "../commande/commande.component";
-import { Link3Component } from "../suivi/link3.component";
 
 import { DocumentsComponent } from "../documents/documents.component";
 import { FacturesComponent } from "../factures/factures.component";
@@ -21,8 +20,9 @@ const routes: Routes = [
     component: NavbarComponent,
     canActivate: [AuthguardService],
     children: [
+      { path: "", redirectTo: "home", pathMatch: "full" },
       {
-        path: "",
+        path: "home",
         component: HomeComponent,
         canActivate: [AuthguardService]
       },
@@ -46,8 +46,7 @@ const routes: Routes = [
 
       {
         path: "suivi",
-        component: Link3Component,
-        canActivate: [AuthguardService]
+        loadChildren: "../suivi/suivi.module#SuiviModule"
       },
       {
         path: "documents",

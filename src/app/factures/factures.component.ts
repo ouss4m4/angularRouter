@@ -15,6 +15,9 @@ export class FacturesComponent implements OnInit {
   ngOnInit() {}
 
   public factureDetails() {
-    this._router.navigate(["documents",{ outlets: { facturesOutlet: ["facture", 113] } },],{ skipLocationChange: true });
+    this._router.navigate([
+      "documents",
+      { outlets: { facturesOutlet: ["facture", 113] } }
+    ]);
   }
 }

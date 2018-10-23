@@ -29,8 +29,7 @@ export class NavbarComponent {
       this._router.navigateByUrl("/commande/(panierOutlet:panier)");
     } else if (str === "documents") {
       this._router.navigateByUrl(
-        "/documents/(facturesOutlet:factures//avoirsOutlet:avoirs//reclamationsOutlet:reclamations//paimentsOutlet:paiments)",
-        { skipLocationChange: true }
+        "/documents/(facturesOutlet:factures//avoirsOutlet:avoirs//reclamationsOutlet:reclamations//paimentsOutlet:paiments)"
       );
     } else {
       this._router.navigate([str]);
