@@ -12,11 +12,8 @@ export class SuiviComponent implements OnInit {
   ngOnInit() {}
 
   public suiviDetails() {
-    this._router.navigateByUrl("suivi/riad/(suiviOutlet:suiviDetails)");
-    /*   console.log("routing ...");
-
     this._router.navigate([{ outlets: { suiviDetails: ["suiviDetails"] } }], {
       relativeTo: this.route
-    }); */
+    });
   }
 }

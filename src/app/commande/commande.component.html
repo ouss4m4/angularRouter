@@ -17,6 +17,7 @@
 
 <mat-tab-group [selectedIndex]="panierOrCommande.value" (selectedIndexChange)="panierOrCommande.setValue($event)">
   <mat-tab label="commande">
+
     <router-outlet></router-outlet> <!-- router for command, generique, history  -->
   </mat-tab>
   <mat-tab label="panier">

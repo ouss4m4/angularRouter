@@ -8,6 +8,7 @@ import { LayoutModule } from "@angular/cdk/layout";
 import { LoginComponent } from "./login/login.component";
 import { MaterialModule } from "./material.module";
 import { Error404Component } from "./error404/error404.component";
+import { MAT_DATE_LOCALE } from "@angular/material";
 
 @NgModule({
   declarations: [AppComponent, LoginComponent, Error404Component],
@@ -18,7 +19,7 @@ import { Error404Component } from "./error404/error404.component";
     LayoutModule,
     MaterialModule
   ],
-  providers: [],
+  providers: [{ provide: MAT_DATE_LOCALE, useValue: "fr-FR" }],
   bootstrap: [AppComponent]
 })
 export class AppModule {}

@@ -25,7 +25,10 @@ export class PanierComponent implements OnInit {
   constructor(private _router: Router, private panierService: PanierService) {}
 
   ngOnInit() {
-    this.panierService.items.subscribe(items => (this._items = items));
+    this.panierService.items.subscribe(items => {
+      this._items = items;
+      this.refreshTable();
+    });
   }
 
   public get items() {
@@ -41,7 +44,6 @@ export class PanierComponent implements OnInit {
 
   public onItemRemove(code) {
     this.panierService.removeItem(code);
-    this.refreshTable();
   }
 
   public onItemEdit(x, y) {
@@ -50,7 +52,6 @@ export class PanierComponent implements OnInit {
       Qts: x
     };
     this.panierService.editItem(info);
-    this.refreshTable();
   }
 
   public addItemToPanier() {
@@ -63,6 +64,5 @@ export class PanierComponent implements OnInit {
       Colisage: "300.00",
       Qts: 69
     });
-    this.refreshTable();
   }
 }

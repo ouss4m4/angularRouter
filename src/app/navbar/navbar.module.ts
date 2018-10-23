@@ -10,6 +10,8 @@ import { CommandeModule } from "../commande/commande.module";
 import { ServiceLayer } from "../services/backend.service";
 import { PanierService } from "../services/panier.service";
 import { HomeComponent } from "../home/home.component";
+import { FactureService } from "../services/factures.service";
+import { FactureDetailService } from "../services/factureDetails.service";
 
 @NgModule({
   imports: [
@@ -21,6 +23,6 @@ import { HomeComponent } from "../home/home.component";
   ],
   exports: [],
   declarations: [NavbarComponent, HomeComponent],
-  providers: [ServiceLayer, PanierService]
+  providers: [ServiceLayer, PanierService, FactureService, FactureDetailService]
 })
 export class NavbarModule {}

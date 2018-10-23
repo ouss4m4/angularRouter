@@ -70,6 +70,7 @@ export class ItemComponent implements OnInit {
   //change the main product to the one clicked in generique list,
   //slide only if clicked === main
   public onGeneriqueClick(code) {
+    this.Qts.reset();
     if (code === this._code) {
       this.selected.setValue(0);
     } else {

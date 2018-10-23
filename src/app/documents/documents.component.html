@@ -1,6 +1,9 @@
-<mat-tab-group (selectedTabChange)="tabSelected($event)">
+<mat-tab-group (selectedTabChange)="tabSelected($event)" class="documentsTab">
   <mat-tab label="Factures">
-    <router-outlet name="facturesOutlet"></router-outlet>
+    <div>
+      <router-outlet name="facturesOutlet"></router-outlet>
+    </div>
+
   </mat-tab>
   <mat-tab label="Avoirs">
     <router-outlet name="avoirsOutlet"></router-outlet>

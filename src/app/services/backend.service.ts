@@ -75,7 +75,7 @@ export class ServiceLayer {
       }, 1000);
     });
   }
-  public factures(): Promise<any> {
+  public factures(date1, date2): Promise<any> {
     return new Promise((resolve, reject) => {
       if (Math.random() > 2) {
         reject("Some random error");

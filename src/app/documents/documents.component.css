@@ -1,0 +1,7 @@
+.documentsTab {
+  position: sticky;
+  top: 40;
+  height: 90vh;
+  width: 95%;
+  padding-left: 18px;
+}

@@ -1,3 +1,39 @@
-<p>
-  facture-detail works!
-</p>
+<mat-spinner *ngIf="isLoading"></mat-spinner>
+
+<div *ngIf="!isLoading" class="enTete">
+  <p class="item"> Facture N°: {{facture.DocNum}} </p>
+  <p class="item">Date : {{facture.dateCreated | date : 'dd/MM/yyyy' }}</p>
+  <p class="item"> Montant: {{facture.total + ' DA'}}</p>
+</div>
+<div class="mat-elevation-z8">
+  <table mat-table [dataSource]="factureDetails">
+
+    <!-- Position Column -->
+    <ng-container matColumnDef="name">
+      <th mat-header-cell *matHeaderCellDef> Produit </th>
+      <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+    </ng-container>
+
+    <!-- Name Column -->
+    <ng-container matColumnDef="prixUnit">
+      <th mat-header-cell *matHeaderCellDef> Prix Unité </th>
+      <td mat-cell *matCellDef="let element"> {{element.prixUnit + ' DA'}} </td>
+    </ng-container>
+
+    <!-- Weight Column -->
+    <ng-container matColumnDef="Qts">
+      <th mat-header-cell *matHeaderCellDef> Quantité </th>
+      <td mat-cell *matCellDef="let element"> {{element.Qts}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="Total">
+      <th mat-header-cell *matHeaderCellDef> Total </th>
+      <td mat-cell *matCellDef="let element"> {{element.Total}} </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;" (click)="selectRow(row)" class="tableRow"></tr>
+  </table>
+
+  <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
+</div>

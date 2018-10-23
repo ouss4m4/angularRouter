@@ -7,11 +7,12 @@ import { MaterialModule } from "../material.module";
 import { FactureDetailComponent } from "../factures/facture-detail/facture-detail.component";
 import { AvoirsComponent } from "../avoirs/avoirs.component";
 import { RouterModule } from "@angular/router";
-import { ReclamationComponent } from '../reclamation/reclamation.component';
-import { PaimentComponent } from '../paiment/paiment.component';
+import { ReclamationComponent } from "../reclamation/reclamation.component";
+import { PaimentComponent } from "../paiment/paiment.component";
+import { ReactiveFormsModule } from "@angular/forms";
 
 @NgModule({
-  imports: [CommonModule, RouterModule, MaterialModule],
+  imports: [CommonModule, RouterModule, MaterialModule, ReactiveFormsModule],
   exports: [],
   declarations: [
     DocumentsComponent,
