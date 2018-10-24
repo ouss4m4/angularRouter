@@ -24,29 +24,29 @@ export class ServiceLayer {
 
   public chaCurrentYearByMonth() {
     return [
-      { month: "Jan", cha: this._getRandomRegisteryEntry("id1", 1) },
-      { month: "Fev", cha: this._getRandomRegisteryEntry("id2", 1) },
-      { month: "Mar", cha: this._getRandomRegisteryEntry("id3", 1) },
-      { month: "Avr", cha: this._getRandomRegisteryEntry("id4", 1) },
-      { month: "Mai", cha: this._getRandomRegisteryEntry("id5", 1) },
-      { month: "Jun", cha: this._getRandomRegisteryEntry("id6", 1) },
-      { month: "Jui", cha: this._getRandomRegisteryEntry("id7", 1) }
+      { name: "Jan", value: this._getRandomRegisteryEntry("id1", 1) },
+      { name: "Fev", value: this._getRandomRegisteryEntry("id2", 1) },
+      { name: "Mar", value: this._getRandomRegisteryEntry("id3", 1) },
+      { name: "Avr", value: this._getRandomRegisteryEntry("id4", 1) },
+      { name: "Mai", value: this._getRandomRegisteryEntry("id5", 1) },
+      { name: "Jun", value: this._getRandomRegisteryEntry("id6", 1) },
+      { name: "Jui", value: this._getRandomRegisteryEntry("id7", 1) }
     ];
   }
   public chaLastYearByMonth() {
     return [
-      { month: "Jan", cha: this._getRandomRegisteryEntry("id8", 1) },
-      { month: "Fev", cha: this._getRandomRegisteryEntry("id9", 1) },
-      { month: "Mar", cha: this._getRandomRegisteryEntry("id10", 1) },
-      { month: "Avr", cha: this._getRandomRegisteryEntry("id11", 1) },
-      { month: "Mai", cha: this._getRandomRegisteryEntry("id12", 1) },
-      { month: "Jun", cha: this._getRandomRegisteryEntry("id13", 1) },
-      { month: "Jui", cha: this._getRandomRegisteryEntry("id14", 1) },
-      { month: "Aou", cha: this._getRandomRegisteryEntry("id15", 1) },
-      { month: "Sep", cha: this._getRandomRegisteryEntry("id16", 1) },
-      { month: "Oct", cha: this._getRandomRegisteryEntry("id17", 1) },
-      { month: "Nov", cha: this._getRandomRegisteryEntry("id18", 1) },
-      { month: "Dev", cha: this._getRandomRegisteryEntry("id19", 1) }
+      { name: "Jan", value: this._getRandomRegisteryEntry("id8", 1) },
+      { name: "Fev", value: this._getRandomRegisteryEntry("id9", 1) },
+      { name: "Mar", value: this._getRandomRegisteryEntry("id10", 1) },
+      { name: "Avr", value: this._getRandomRegisteryEntry("id11", 1) },
+      { name: "Mai", value: this._getRandomRegisteryEntry("id12", 1) },
+      { name: "Jun", value: this._getRandomRegisteryEntry("id13", 1) },
+      { name: "Jui", value: this._getRandomRegisteryEntry("id14", 1) },
+      { name: "Aou", value: this._getRandomRegisteryEntry("id15", 1) },
+      { name: "Sep", value: this._getRandomRegisteryEntry("id16", 1) },
+      { name: "Oct", value: this._getRandomRegisteryEntry("id17", 1) },
+      { name: "Nov", value: this._getRandomRegisteryEntry("id18", 1) },
+      { name: "Dev", value: this._getRandomRegisteryEntry("id19", 1) }
     ];
   }
   public chaCurrentYear() {
