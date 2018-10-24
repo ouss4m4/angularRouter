@@ -1,0 +1,15 @@
+.homeContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: stretch;
+  flex-basis: 0.3%;
+}
+
+.STATS {
+}
+
+.EVOLUTION {
+}
+.CA-LABO {
+}
