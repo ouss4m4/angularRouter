@@ -55,6 +55,7 @@ export class FacturesComponent implements OnInit {
   public SearchByDate() {
     if (this.isValidDate()) {
       this.openSnackBar("Searching ...", "ok");
+      this.factures = new MatTableDataSource<any>();
       this.facturesService.fetchByDate("1", "2");
     } else {
       return;

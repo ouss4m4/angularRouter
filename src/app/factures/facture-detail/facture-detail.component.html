@@ -5,6 +5,7 @@
   <p class="item">Date : {{facture.dateCreated | date : 'dd/MM/yyyy' }}</p>
   <p class="item"> Montant: {{facture.total + ' DA'}}</p>
 </div>
+
 <div class="mat-elevation-z8">
   <table mat-table [dataSource]="factureDetails">
 

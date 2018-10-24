@@ -8,15 +8,14 @@ table {
 .tableRow {
   cursor: pointer;
 }
-.facturesHeader {
+.enTete {
   display: block;
-  position: sticky;
-  width: 100%;
+  position: fixed;
+  width: 80vw;
+  height: 60px;
   z-index: 10;
 }
 .tableWrap {
   display: block;
-  position: relative;
-  top: 250;
-  margin-top: 35px;
+  padding-top: 35px;
 }
