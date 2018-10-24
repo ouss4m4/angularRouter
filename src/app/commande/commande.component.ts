@@ -14,7 +14,7 @@ export class CommandeComponent implements OnInit {
   options: object[] = [];
   public panierOrCommande = new FormControl(0);
   constructor(private _serviceLayer: ServiceLayer, private router: Router) {}
-
+  highlighted: boolean = true;
   ngOnInit() {
     this.search.valueChanges
       .pipe(debounceTime(500))
@@ -38,6 +38,7 @@ export class CommandeComponent implements OnInit {
     this.search.setValue("");
     this.router.navigate(["commande", code]);
     this.panierOrCommande.setValue(0);
+    this.highlighted = false;
   }
   public navTab(event) {
     event = event === 0 ? "commande" : "panier";

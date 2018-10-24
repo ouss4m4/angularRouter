@@ -11,14 +11,16 @@
   </form>
 </mat-card>
 
-
-
-
-
 <mat-tab-group [selectedIndex]="panierOrCommande.value" (selectedIndexChange)="panierOrCommande.setValue($event)">
   <mat-tab label="commande">
-
-    <router-outlet></router-outlet> <!-- router for command, generique, history  -->
+    <div *ngIf="highlighted">
+      <h1> Highlighted Products </h1>
+      <p> Zanitra </p>
+      <p> Lomac </p>
+      <p> Maxidrol </p>
+    </div>
+    <router-outlet></router-outlet>
+    <!-- router for command, generique, history  -->
   </mat-tab>
   <mat-tab label="panier">
     <router-outlet name="panierOutlet"></router-outlet> <!-- named router for panier,  -->
