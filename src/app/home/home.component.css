@@ -1,13 +1,6 @@
-.homeContainer {
-  display: flex;
-  flex-direction: row;
-  flex-basis: 0.47%;
-}
-
-.STATS {
-}
-
-.EVOLUTION {
-}
-.CA-LABO {
+.chart {
+  display: grid;
+  max-width: 90%;
+  max-height: 90%;
+  min-height: 360px;
 }

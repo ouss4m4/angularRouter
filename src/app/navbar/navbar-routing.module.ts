@@ -54,28 +54,23 @@ const routes: Routes = [
         children: [
           {
             path: "factures",
-            component: FacturesComponent,
-            outlet: "facturesOutlet"
+            component: FacturesComponent
           },
           {
             path: "facture/:id",
-            component: FactureDetailComponent,
-            outlet: "facturesOutlet"
+            component: FactureDetailComponent
           },
           {
             path: "avoirs",
-            component: AvoirsComponent,
-            outlet: "avoirsOutlet"
+            component: AvoirsComponent
           },
           {
             path: "reclamations",
-            component: ReclamationComponent,
-            outlet: "reclamationsOutlet"
+            component: ReclamationComponent
           },
           {
             path: "paiments",
-            component: PaimentComponent,
-            outlet: "paimentsOutlet"
+            component: PaimentComponent
           }
         ]
       }

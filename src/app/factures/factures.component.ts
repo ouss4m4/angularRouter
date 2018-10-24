@@ -84,9 +84,6 @@ export class FacturesComponent implements OnInit {
   }
 
   public selectRow(row) {
-    this._router.navigate([
-      "documents",
-      { outlets: { facturesOutlet: ["facture", row.id] } }
-    ]);
+    this._router.navigate(["documents", "facture", row.id]);
   }
 }

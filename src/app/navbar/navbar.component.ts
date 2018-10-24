@@ -27,10 +27,6 @@ export class NavbarComponent {
   public routeTo(str) {
     if (str === "commande") {
       this._router.navigateByUrl("/commande/(panierOutlet:panier)");
-    } else if (str === "documents") {
-      this._router.navigateByUrl(
-        "/documents/(facturesOutlet:factures//avoirsOutlet:avoirs//reclamationsOutlet:reclamations//paimentsOutlet:paiments)"
-      );
     } else {
       this._router.navigate([str]);
     }

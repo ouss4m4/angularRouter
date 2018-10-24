@@ -13,25 +13,10 @@ export class DocumentsComponent implements OnInit {
   ) {}
 
   ngOnInit() {}
-
-  public tabSelected(event) {
-    /*switch (event.index) {
-      case 0:
-        this._router.navigateByUrl("/documents/(facturesOutlet:factures)");
-        break;
-      case 1:
-        this._router.navigateByUrl("/documents/(avoirsOutlet:avoirs)");
-        break;
-      case 2:
-        this._router.navigateByUrl(
-          "/documents/(reclamationsOutlet:reclamations)"
-        );
-        break;
-      case 3:
-        this._router.navigateByUrl("/documents/(paimentsOutlet:paiments)");
-        break;
-      default:
-        break;
-    }*/
-  }
+  navLinks = [
+    { path: "factures", label: "factures" },
+    { path: "avoirs", label: "avoirs" },
+    { path: "reclamations", label: "reclamations" },
+    { path: "paiments", label: "paiments" }
+  ];
 }

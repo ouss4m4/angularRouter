@@ -1,17 +1,8 @@
-<mat-tab-group (selectedTabChange)="tabSelected($event)" class="documentsTab">
-  <mat-tab label="Factures">
-    <div>
-      <router-outlet name="facturesOutlet"></router-outlet>
-    </div>
+<nav mat-tab-nav-bar>
+  <a mat-tab-link *ngFor="let link of navLinks" [routerLink]="link.path" routerLinkActive #rla="routerLinkActive"
+    [active]="rla.isActive">
+    {{link.label}}
+  </a>
+</nav>
 
-  </mat-tab>
-  <mat-tab label="Avoirs">
-    <router-outlet name="avoirsOutlet"></router-outlet>
-  </mat-tab>
-  <mat-tab label="Reclamation">
-    <router-outlet name="reclamationsOutlet"></router-outlet>
-  </mat-tab>
-  <mat-tab label="Paiments">
-    <router-outlet name="paimentsOutlet"></router-outlet>
-  </mat-tab>
-</mat-tab-group>
+<router-outlet></router-outlet>

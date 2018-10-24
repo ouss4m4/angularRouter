@@ -5,9 +5,10 @@ import { NumberCardComponent } from "./statistiques/numberCard.component";
 import { NgxChartsModule } from "@swimlane/ngx-charts";
 import { EvolutionComponent } from "./evolutionChart/evolution.component";
 import { BarChartComponent } from "./barChart/barchart.component";
+import { MaterialModule } from "../material.module";
 
 @NgModule({
-  imports: [NgxChartsModule],
+  imports: [NgxChartsModule, MaterialModule],
   exports: [],
   declarations: [
     HomeComponent,
