@@ -25,7 +25,7 @@ export class EvolutionComponent implements OnInit {
     console.log(this.lineData);
   }
   //options.
-  view = [];
+  view = [400, 400];
   showXAxis = true;
   showYAxis = true;
   gradient = false;

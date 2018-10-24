@@ -29,7 +29,7 @@ export class BarChartComponent implements OnInit {
       value: 900000
     }
   ];
-  view = [];
+  view = [400, 400];
   colorScheme = {
     domain: ["#5AA454", "#A10A28", "#C7B42C", "#AAAAAA"]
   };

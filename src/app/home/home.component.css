@@ -1,9 +1,7 @@
 .homeContainer {
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
-  align-items: stretch;
-  flex-basis: 0.3%;
+  flex-basis: 0.47%;
 }
 
 .STATS {
