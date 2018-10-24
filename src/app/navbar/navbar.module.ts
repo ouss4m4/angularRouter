@@ -9,9 +9,11 @@ import { DocumentsModule } from "../documents/documents.module";
 import { CommandeModule } from "../commande/commande.module";
 import { ServiceLayer } from "../services/backend.service";
 import { PanierService } from "../services/panier.service";
-import { HomeComponent } from "../home/home.component";
+
 import { FactureService } from "../services/factures.service";
 import { FactureDetailService } from "../services/factureDetails.service";
+import { NgxChartsModule } from "@swimlane/ngx-charts";
+import { HomeModule } from "../home/home.module";
 
 @NgModule({
   imports: [
@@ -19,10 +21,12 @@ import { FactureDetailService } from "../services/factureDetails.service";
     NavbarRoutingModule,
     MaterialModule,
     DocumentsModule,
-    CommandeModule
+    CommandeModule,
+    NgxChartsModule,
+    HomeModule
   ],
   exports: [],
-  declarations: [NavbarComponent, HomeComponent],
+  declarations: [NavbarComponent],
   providers: [ServiceLayer, PanierService, FactureService, FactureDetailService]
 })
 export class NavbarModule {}
