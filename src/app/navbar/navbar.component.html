@@ -3,11 +3,11 @@
     [mode]="(isHandset$ | async) ? 'over' : 'side'" [opened]="!(isHandset$ | async)">
     <mat-toolbar>Menu</mat-toolbar>
     <mat-nav-list>
-      <button mat-list-item (click)="routeTo('home')"> home</button>
-      <button mat-list-item (click)="routeTo('commande')"> Commande</button>
-      <button mat-list-item (click)="routeTo('suivi')"> suivi</button>
-      <button mat-list-item (click)="routeTo('documents')"> documents</button>
-      <button mat-list-item (click)="logMeOut()"> Logout</button>
+      <a [routerLink]="['/home']" routerLinkActive="router-link-active" mat-list-item>Home</a>
+      <a [routerLink]="['/commande']" routerLinkActive="router-link-active" mat-list-item>Commande</a>
+      <a [routerLink]="['/suivi']" routerLinkActive="router-link-active" mat-list-item>Suivi</a>
+      <a [routerLink]="['/documents/factures']" routerLinkActive="router-link-active" mat-list-item>Documents</a>
+      <a mat-list-item (click)="logMeOut()"> Logout</a>
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
