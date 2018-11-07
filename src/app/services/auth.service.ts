@@ -1,18 +1,18 @@
-import { Injectable } from "@angular/core";
+import { Injectable } from '@angular/core';
 
 @Injectable({
-  providedIn: "root"
+  providedIn: 'root'
 })
 export class AuthService {
-  private status: boolean = false;
+  private status = false;
   constructor() {}
   public isLogged() {
-    //console.log("authservice.islogged() called, status is : " + this.status);
+    // console.log("authservice.islogged() called, status is : " + this.status);
     return this.status;
   }
   public logIn() {
     this.status = true;
-    //console.log("authservice.login()  called, status is : " + this.status);
+    // console.log("authservice.login()  called, status is : " + this.status);
   }
   public logOut() {
     this.status = false;

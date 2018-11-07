@@ -1,15 +1,15 @@
-import { Component, OnInit, ViewChild } from "@angular/core";
-import { Router, ActivatedRoute } from "@angular/router";
-import { MatPaginator, MatTableDataSource } from "@angular/material";
-import { FormControl } from "@angular/forms";
-import { MatSnackBar } from "@angular/material";
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { Router, ActivatedRoute } from '@angular/router';
+import { MatPaginator, MatTableDataSource } from '@angular/material';
+import { FormControl } from '@angular/forms';
+import { MatSnackBar } from '@angular/material';
 
-import { FactureService } from "../services/factures.service";
+import { FactureService } from '../services/factures.service';
 
 @Component({
-  selector: "app-factures",
-  templateUrl: "./factures.component.html",
-  styleUrls: ["./factures.component.css"]
+  selector: 'app-factures',
+  templateUrl: './factures.component.html',
+  styleUrls: ['./factures.component.css']
 })
 /*  DocNum: '180134503',
     total: this._getRandomRegisteryEntry('id24', 5),
@@ -19,7 +19,7 @@ export class FacturesComponent implements OnInit {
   public dateFin = new FormControl(new Date(Date.now()));
 
   public factures;
-  displayedColumns: string[] = ["DocNum", "dateCreated", "total"];
+  displayedColumns: string[] = ['DocNum', 'dateCreated', 'total'];
   @ViewChild(MatPaginator)
   paginator: MatPaginator;
 
@@ -38,7 +38,7 @@ export class FacturesComponent implements OnInit {
     this.getCurrentMonth();
   }
 
-  //both inputs are valid dates, &  dateFin > Debut
+  // both inputs are valid dates, &  dateFin > Debut
   public isValidDate() {
     if (this.dateDebut.valid && this.dateFin.valid) {
       if (this.dateFin.value > this.dateDebut.value) {
@@ -51,29 +51,29 @@ export class FacturesComponent implements OnInit {
     }
   }
 
-  //fetch selected date factures
+  // fetch selected date factures
   public SearchByDate() {
     if (this.isValidDate()) {
-      this.openSnackBar("Searching ...", "ok");
+      this.openSnackBar('Searching ...', 'ok');
       this.factures = new MatTableDataSource<any>();
-      this.facturesService.fetchByDate("1", "2");
+      this.facturesService.fetchByDate('1', '2');
     } else {
       return;
     }
   }
-  //at init show last month bracket
+  // at init show last month bracket
   public getCurrentMonth() {
-    let date = new Date();
-    var firstDay = new Date(date.getFullYear(), date.getMonth(), 1);
-    var lastDay = new Date(date.getFullYear(), date.getMonth() + 1, 0);
+    const date = new Date();
+    const firstDay = new Date(date.getFullYear(), date.getMonth(), 1);
+    const lastDay = new Date(date.getFullYear(), date.getMonth() + 1, 0);
     this.dateDebut.setValue(firstDay);
     this.dateFin.setValue(lastDay);
   }
-  //route to facture details
+  // route to facture details
   public factureDetails() {
     this._router.navigate([
-      "documents",
-      { outlets: { facturesOutlet: ["facture", 113] } }
+      'documents',
+      { outlets: { facturesOutlet: ['facture', 113] } }
     ]);
   }
 
@@ -84,6 +84,6 @@ export class FacturesComponent implements OnInit {
   }
 
   public selectRow(row) {
-    this._router.navigate(["documents", "facture", row.id]);
+    this._router.navigate(['documents', 'facture', row.id]);
   }
 }

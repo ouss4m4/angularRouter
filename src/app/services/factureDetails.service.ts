@@ -1,6 +1,6 @@
-import { Injectable } from "@angular/core";
-import { BehaviorSubject } from "rxjs";
-import { ServiceLayer } from "./backend.service";
+import { Injectable } from '@angular/core';
+import { BehaviorSubject } from 'rxjs';
+import { ServiceLayer } from './backend.service';
 
 @Injectable()
 export class FactureDetailService {

@@ -1,22 +1,22 @@
-import { Component, OnInit, ViewChild } from "@angular/core";
-import { ActivatedRoute } from "@angular/router";
-import { ServiceLayer } from "src/app/services/backend.service";
-import { MatTableDataSource, MatPaginator } from "@angular/material";
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { ServiceLayer } from 'src/app/services/backend.service';
+import { MatTableDataSource, MatPaginator } from '@angular/material';
 
 @Component({
-  selector: "app-facture-detail",
-  templateUrl: "./facture-detail.component.html",
-  styleUrls: ["./facture-detail.component.css"]
+  selector: 'app-facture-detail',
+  templateUrl: './facture-detail.component.html',
+  styleUrls: ['./facture-detail.component.css']
 })
 export class FactureDetailComponent implements OnInit {
-  //set variables
+  // set variables
   public factureId = this.route.snapshot.params.id;
   public facture;
   public factureDetails: MatTableDataSource<any> = new MatTableDataSource<
     any
   >();
-  public isLoading: boolean = false;
-  public displayedColumns: string[] = ["name", "prixUnit", "Qts", "Total"];
+  public isLoading = false;
+  public displayedColumns: string[] = ['name', 'prixUnit', 'Qts', 'Total'];
   @ViewChild(MatPaginator)
   paginator: MatPaginator;
 

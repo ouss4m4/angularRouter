@@ -1,0 +1,12 @@
+agm-map {
+  width: 350px;
+  height: 350px;
+}
+
+.statusIcons {
+  font-size: 42px;
+}
+
+.done {
+  color: green;
+}

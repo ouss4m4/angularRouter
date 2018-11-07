@@ -1,3 +1,29 @@
-<p>
-  suivi-detail works!
-</p>
+<div class="container">
+  <mat-spinner *ngIf="isLoading"></mat-spinner>
+  <div class="row" *ngIf="!isLoading">
+    <div class="col-md-6">
+      <div class="row statusIcons">
+        <div class="col-md-4"><i class='fas fa-box' [class.done]="getClassName('prep')"> </i>
+          <p>{{item.preparation | date}}</p>
+        </div>
+        <div class="col-md-4"><i class="fas fa-building" [class.done]="getClassName('expe')"></i></div>
+        <div class="col-md-4"><i class='fas fa-truck' [class.done]="getClassName('livr')"></i></div>
+      </div>
+      <div>
+        <mat-list *ngIf="!isLoading">
+          <mat-list-item> Numero Commande : {{item.DocNum}} </mat-list-item>
+          <mat-list-item> Montant total : {{item.total}} </mat-list-item>
+          <mat-list-item> Date Creation : {{item.dateCreated | date }} </mat-list-item>
+          <mat-list-item *ngFor="let item of item.DocLines">{{ item.name }}</mat-list-item>
+        </mat-list>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <agm-map [latitude]="lat" [longitude]="lng" *ngIf="item.livraison">
+        <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
+      </agm-map>
+    </div>
+  </div>
+
+
+</div>
