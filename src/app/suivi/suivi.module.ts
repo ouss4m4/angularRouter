@@ -14,7 +14,7 @@ import { AgmCoreModule } from "@agm/core";
     SuiviRoutingModule,
     MaterialModule,
     AgmCoreModule.forRoot({
-      apiKey: "AIzaSyAkW-srjNAbmajxrhpIUR0rhY4nsuhBZro"
+      apiKey: "ze apikey goes here"
     })
   ],
   exports: [],
